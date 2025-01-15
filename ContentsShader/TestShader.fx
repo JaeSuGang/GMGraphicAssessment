@@ -71,16 +71,16 @@ cbuffer FMyColor : register(b0)
 float4 MY_PS(VertexShaderOutPut _Vertex) : SV_Target0
 {
     if (_Vertex.UV.x < 0.5f && _Vertex.UV.y > 0.5f)
-		return float4(1.0f, 0.0f, 0.0f, 1.0f);
-	
-    if (_Vertex.UV.x > 0.5f && _Vertex.UV.y > 0.5f)
-        return float4(1.0f, 0.0f, 1.0f, 1.0f);
-	
-    if (_Vertex.UV.x < 0.5f && _Vertex.UV.y < 0.5f)
         return float4(0.0f, 1.0f, 0.0f, 1.0f);
 	
-    if (_Vertex.UV.x > 0.5f && _Vertex.UV.y < 0.5f)
+    if (_Vertex.UV.x > 0.5f && _Vertex.UV.y > 0.5f)
         return float4(1.0f, 1.0f, 0.0f, 1.0f);
+	
+    if (_Vertex.UV.x < 0.5f && _Vertex.UV.y < 0.5f)
+		return float4(1.0f, 0.0f, 0.0f, 1.0f);
+	
+    if (_Vertex.UV.x > 0.5f && _Vertex.UV.y < 0.5f)
+        return float4(1.0f, 0.0f, 1.0f, 1.0f);
 	
     return float4(0.0f, 1.0f, 0.0f, 1.0f);
 };
