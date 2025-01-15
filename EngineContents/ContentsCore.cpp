@@ -13,6 +13,8 @@
 #include <EngineCore/EngineGUIWindow.h>
 #include "TitleHUD.h"
 #include "ContentsEditorGUI.h"
+#include "EngineCore/CameraActor.h"
+#include "EnginePlatform/EngineInput.h"
 
 // #define은 그냥 무조건 복붙
 CreateContentsCoreDefine(UContentsCore);
@@ -51,7 +53,6 @@ void UContentsCore::EngineStart(UEngineInitData& _Data)
 
 void UContentsCore::EngineTick(float _DeltaTime)
 {
-
 }
 
 void UContentsCore::EngineEnd()

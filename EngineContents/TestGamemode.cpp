@@ -17,7 +17,7 @@ void ATestGameMode::Tick(float _DeltaTime)
 {
 	AGameMode::Tick(_DeltaTime);
 
-	if (UEngineInput::IsDown('P'))
+	if (UEngineInput::IsPress('P'))
 	{
 		World->GetMainCamera()->FreeCameraSwitch();
 	}

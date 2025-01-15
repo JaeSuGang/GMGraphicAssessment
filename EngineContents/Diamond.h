@@ -6,6 +6,8 @@ class ADiamond : public AActor
 public:
 	ADiamond();
 
+	void Tick(float fDeltaTime) override;
+
 protected:
 
 	std::shared_ptr<class URenderer> Renderer;
